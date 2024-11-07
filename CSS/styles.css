@@ -1,0 +1,345 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../Img/neon-headphones-wallpapers.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.logo-icon {
+    width: 40px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove a sublinhado padrão */
+    color: #ffffff; /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento ao redor do texto */
+    position: relative; /* Necessário para o efeito de linha */
+    display: inline-block;
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+
+nav ul li a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; 
+    background-color: #000; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+    transform-origin: left; 
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); 
+}
+
+nav ul li a:hover {
+    color: #007BFF; 
+}
+
+.connect-btn {
+    background-color: #e63946;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+}
+
+.banner-content {
+    max-width: 50%; /* Mantém o texto no seu tamanho original */
+    justify-content: center;
+}
+
+.banner-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner-buttons button {
+    background-color: #e63946;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.banner-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%; 
+    margin-top:50px;
+}
+
+.banner-image img {
+    width: 600px; /* Define um tamanho fixo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+}
+
+.player {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: rgb(250, 10, 10);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.controls button:focus {
+    outline: none;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    position: relative;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.progress-bar div {
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+#playPauseButton {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#playPauseButton:hover {
+    transform: scale(1.4);
+    transition: all 0.3s ease;
+}
+
+#playbefore:hover {
+    transform: scale(1.4);
+    transition: all 0.3s ease;
+}
+
+#playnext:hover {
+    transform: scale(1.4);
+    transition: all 0.3s ease;
+}
+
+#playPauseButton:before {
+    font-size: 1.9em;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#playPauseButton.paused:before {
+    content: "⏸️";
+}
+
+
+
+
+.statistics {
+    display: flex;
+    padding: 20px; 
+    background-color: #1e1e2f;
+    gap: 10px; 
+    width: 60%;
+    border-radius: 8px;
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+
+.stat-item {
+    flex: 1;
+    text-align: center;
+    border-left: 2px solid #e63946; 
+}
+
+.stat-item:first-child {
+    border-left: none; 
+}
+
+.stat-item h3 {
+    font-size: 24px; 
+    color: #e63946;
+}
+
+.stat-item p {
+    font-size: 14px; 
+}
+
+
+
+
+.benefits {
+    text-align: center;
+    padding: 60px 20px;
+
+}
+
+.benefits h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.benefit-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.benefit-card {
+    background: linear-gradient(to bottom, #282885, #0a0c16);
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+}
+
+.benefit-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+.benefit-card p {
+    font-size: 16px;
+}
+
+.icon{
+    width: 45px;
+}
+
+
+.banner-image {
+    max-width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;  
+    top: -90px;  
+}
+
+.banner-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.banner-image {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#audioPlayer {
+    display: none;
+}

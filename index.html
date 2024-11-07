@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicFlow</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./Img/audiologo.png" alt="MusicFlow Icon" class="logo-icon">
+            MusicFlow
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tracks</a></li>
+                <li><a href="#">Artists</a></li>
+                <li><a href="#">Playlist</a></li>
+            </ul>
+        </nav>
+        <button class="connect-btn">Connect Playlist</button>
+    </header>
+    
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Make Your Sound Count - Earn by Sharing High-Quality Music</h1>
+            <p>MusicFlow is a platform where music lovers can earn by sharing and discovering new high-quality tracks and artists.</p>
+            <div class="banner-buttons">
+                <button class="explore-btn">Explore Now</button>
+                <button class="how-it-works-btn">How It Works</button>
+            </div>
+        </div>
+    
+        <div class="banner-image">
+            <img src="./Img/song-unscreen.gif" alt="Music Wave Animation">
+            
+            <audio id="audioPlayer">
+                <source src="./Audio/bensound-brighterthanever.mp3" type="audio/mpeg">
+            </audio>
+        
+            <div class="progress-bar" id="progressBar">
+                <div id="progress"></div>
+            </div>
+        
+            <div class="time">
+                <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+            </div>
+        
+            <div class="controls">
+                <button id="playbefore" onclick="previousTrack()">⏪</button>
+                <button id="playPauseButton" onclick="togglePlayPause()">▶️</button>
+                <button id="playnext" onclick="nextTrack()">⏩</button>
+            </div>
+ 
+        </div>
+    </section>
+    
+
+
+    <section class="statistics">
+        <div class="stat-item">
+            <h3>45,000+</h3>
+            <p>Artists</p>
+        </div>
+        <div class="stat-item">
+            <h3>120,000+</h3>
+            <p>Tracks Shared</p>
+        </div>
+        <div class="stat-item">
+            <h3>99.9%</h3>
+            <p>Uptime</p>
+        </div>
+        <div class="stat-item">
+            <h3>1M+</h3>
+            <p>Monthly Listeners</p>
+        </div>
+    </section>
+
+
+<section class="benefits">
+    <h2>Best Features to Enhance Your Music Experience</h2>
+    <p>MusicFlow brings music enthusiasts closer to high-quality tracks and lets them earn rewards for sharing music they love.</p>
+    
+    <div class="benefit-cards">
+        <div class="benefit-card">
+            <img class="icon" src="./Img/discovery.png" alt="">
+            <h3>Discover New Tracks</h3>
+            <p>Find exclusive, high-quality tracks from upcoming and established artists.</p>
+        </div>
+        <div class="benefit-card">
+            <img class="icon" src="./Img/Earn.png" alt="">
+            <h3>Earn for Sharing</h3>
+            <p>Share new releases and earn rewards for helping others discover great music.</p>
+        </div>
+        <div class="benefit-card">
+            <img class="icon" src="./Img/Connect.png" alt="">
+            <h3>Connect with Artists</h3>
+            <p>Engage directly with your favorite artists and support their work.</p>
+        </div>
+    </div>
+</section>
+
+
+    <script src="./JavaScript/script.js"></script>
+</body>
+</html>
